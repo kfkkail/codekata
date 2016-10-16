@@ -2,11 +2,11 @@ var test = require('unit.js');
 var chop = require('../app/chop.js')
 
 describe("Kata02", function() {
-  describe("Binary Chop", function() {
+  describe("Binary", function() {
     it("Chop the bits! Array Size 1", function() {
-      test.assert(-1 === chop.chop(3, []));
-      test.assert(-1 === chop.chop(3, [1]));
-      test.assert(0 === chop.chop(1, [1]));
+      test.value(chop.chop(3,[])).isEqualTo(-1);
+      test.value(chop.chop(3,[1])).isEqualTo(-1);
+      test.value(chop.chop(1,[1])).isEqualTo(0);
     });
 
     it("Chop the bits! Array Size 3", function() {
